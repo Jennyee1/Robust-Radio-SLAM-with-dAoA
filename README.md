@@ -22,7 +22,7 @@ A top-level main.m script or example file for reproducing the simulation results
 **To use the code at this time, you will need to**:\
 Prepare your own dataset (either simulated or experimental) according to the data structure required by the function.\
 Write your own main script to load the data and call the BPbasedSLAM_dAoA.m function to run the SLAM process.\
-We are working on providing a complete example script soon.\
+We are working on providing a complete example script soon.
 
 ## License
 This project is licensed under the MIT License.
