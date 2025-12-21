@@ -1,29 +1,52 @@
 # Robust-Radio-SLAM-with-dAoA
 
-This repository provides the official MATLAB implementation for the paper: \
-**"ROBUST RADIO SLAM BY FUSING TEMPORAL-SPATIAL DIFFERENTIAL AOA INFORMATION COOPERATIVELY"** \
-Submitted to: **ICASSP 2026**
+This repository contains the official MATLAB implementation for the paper:
 
+**"ROBUST RADIO SLAM BY FUSING TEMPORAL-SPATIAL DIFFERENTIAL AOA INFORMATION COOPERATIVELY"**
+
+**Status:** Submitted to **ICASSP 2026**
+> *Update (2025-12-21): The codebase has been updated to enhance the reproducibility of the new version. Detailed usage instructions have been added.*
+---
+
+## Introduction
+This project implements a robust Radio-SLAM framework that cooperatively fuses **Temporal Differential AoA (T-dAoA)** and **Spatial Differential AoA (S-dAoA)** information. 
+
+### Key Features
+* **Temporal & Spatial Fusion:** Jointly utilizes time-domain and space-domain differential angle information.
+* **Robust Data Association:** BP-based message passing for accurate feature identification in cluttered environments.
+* **Detailed Analysis:** Includes ablation studies and complexity analysis (see Supplementary Material).
+
+---
+
+## Repository Structure
+
+* **`main_example.m`**: The main entry script. Run this file to reproduce the simulation results and visualize the SLAM process.
+* **`BPbasedSLAM_dAoA_v2.m`**: The core function implementing the proposed SLAM framework.
+* **`functions/`**: Contains all necessary sub-functions for data generation, particle filtering, and mathematical calculations, etc.
+* **`Get_ablation_res.m`** & **`Res_ablation.mat`**: Scripts and data files related to the ablation studies presented in the paper.
+* **`SupplementaryMaterial.pdf`**: Provides detailed supplementary content, including:
+    * Detailed Ablation Study Results
+    * Computational Complexity Analysis
+    * List of Symbols and Notations
 
 ---
 
 ## Requirements
-MATLAB R2024b
 
-## Usage
+* **MATLAB R2024b** (or later recommended)
+* *Note: Ensure standard toolboxes
 
-**Current Status**:\
-This repository currently provides the core framework function described in the paper:\
-BPbasedSLAM_dAoA.m: This function implements the main Radio-SLAM framework algorithm, which fuses temporal and spatial dAoA information.
+---
 
-**How to Run**:\
-A top-level main.m script or example file for reproducing the simulation results from the paper is not yet included. This is planned for a future update.
+## Run the Simulation
+1. Open MATLAB and navigate to the repository folder.
+2. Add the functions folder to your MATLAB path (or let the script handle it).
+3. Run the main example script: main_example.m
 
-**To use the code at this time, you will need to**:\
-Prepare your own dataset (either simulated or experimental) according to the data structure required by the function.\
-Write your own main script to load the data and call the BPbasedSLAM_dAoA.m function to run the SLAM process.\
-We are working on providing a complete example script soon.
+This script will load the simulation scenarios, execute the BPbasedSLAM_dAoA_v2 algorithm, and get the estimated results.
+
+---
 
 ## License
-This project is licensed under the MIT License.
+This project is licensed under the MIT License - see the LICENSE file for details.
 
