@@ -20,7 +20,6 @@ This project implements a robust Radio-SLAM framework that cooperatively fuses *
 
 ## Repository Structure
 
-* **`main_example.m`**: The main entry script. Run this file to reproduce the simulation results and visualize the SLAM process.
 * **`BPbasedSLAM_dAoA_v2.m`**: The core function implementing the proposed SLAM framework.
 * **`functions/`**: Contains all necessary sub-functions for data generation, particle filtering, and mathematical calculations, etc.
 * **`Get_ablation_res.m`** & **`Res_ablation.mat`**: Scripts and data files related to the ablation studies presented in the paper.
